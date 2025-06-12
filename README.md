@@ -1,32 +1,31 @@
 # Mental-Health-Classification
 
 ## 📌 Overview
-This project aims to predict a person's sleep duration based on various health and lifestyle factors such as stress level, physical activity level, BMI Category, etc using multiple regression models in Python 
+This project aims to classifying anxiety and stress levels by identifying five factors influencing the stress of final-year students, including the supervisor role, literature review, analysis method, support system, and research gap
 
 ## 📌 Project Goals
-- Understand which features impact sleep duration
-- Build machine learning models to predict sleep duration
-- Evaluate model performance using MSE and R<sup>2</sup>
-- Visualize results and extract insights from feature importance
+- Identifying factors that influence stress and anxiety levels
+- Building an accurate predictive model
 
 ## 📂 Project Structure
 This project include the following main components
 1. Data Preprocessing
    - Handling missing value
-   - Handling outliers using Z-Score
+   - Convert categorical into numerical features manually
+   - Balancing Data using SMOTE
    - Standardization using StandarScaler
-   - Convert categorical features into numerical using LabelEncoder
 2. Modelling
-   - Applying multiple regression models : Linear Regression, Random Forest, XGBoost, Support Vector Machine
+   - Applying SVM with multiple kernel functions : Polynomial, Radial Basis Function, Linear, and Sigmoid
+   - Adjusting SVM with C value = 10, 100, 1000. Degree for Polynomial = 1, 2, 3. Gamma for RBF and Sigmoid = 1, 2, 3
 3. Evaluation
-   - Evaluating model performance using MSE and R<sup>2</sup>
+   - Evaluating model performance using Cross Validation with 5-fold
 
 ## 📈 Visualization
-- Sleep Duration by Categorical Feature
-- Correlation heatmap (Numerical Feature)
-- Model performance bar charts
+- Distribution of Stress and Anxiety Levels
+- Distribution of Stress and Anxiety Levels each Major
 - Feature importance (from best model)
 
 ## 🔎 Key Findings
-- Random Forest performed the best (R<sup>2</sup> = 0.9895)
-- Stress Level and Physical Activity were the most influential features
+- Highest accuracy for Stress dataset classification is Radial Basis Function kernel with gamma value of 1, and C value of 100 reached 68%
+- Highest accuracy for Anxiety dataset classification is Polynomial kernel, degree value of 3 and C value of 100, reaching 50%
+- Literature Review, Support System, and Analysis Method were the most influential features
